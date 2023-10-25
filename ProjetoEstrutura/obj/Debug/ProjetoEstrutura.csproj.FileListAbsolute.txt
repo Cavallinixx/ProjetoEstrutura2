@@ -1,0 +1,8 @@
+C:\Users\vitor.csouza14\source\repos\ProjetoEstrutura\ProjetoEstrutura\bin\Debug\ProjetoEstrutura.exe.config
+C:\Users\vitor.csouza14\source\repos\ProjetoEstrutura\ProjetoEstrutura\bin\Debug\ProjetoEstrutura.exe
+C:\Users\vitor.csouza14\source\repos\ProjetoEstrutura\ProjetoEstrutura\bin\Debug\ProjetoEstrutura.pdb
+C:\Users\vitor.csouza14\source\repos\ProjetoEstrutura\ProjetoEstrutura\obj\Debug\ProjetoEstrutura.csproj.AssemblyReference.cache
+C:\Users\vitor.csouza14\source\repos\ProjetoEstrutura\ProjetoEstrutura\obj\Debug\ProjetoEstrutura.csproj.SuggestedBindingRedirects.cache
+C:\Users\vitor.csouza14\source\repos\ProjetoEstrutura\ProjetoEstrutura\obj\Debug\ProjetoEstrutura.csproj.CoreCompileInputs.cache
+C:\Users\vitor.csouza14\source\repos\ProjetoEstrutura\ProjetoEstrutura\obj\Debug\ProjetoEstrutura.exe
+C:\Users\vitor.csouza14\source\repos\ProjetoEstrutura\ProjetoEstrutura\obj\Debug\ProjetoEstrutura.pdb
