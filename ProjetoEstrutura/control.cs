@@ -31,7 +31,7 @@ namespace ProjetoEstruturaRepeticaoVetor
                               "3. Número Par \n" +
                               "4. Média de notas 20 alunos\n" +
                               "5. Quantidade de números pares\n" +
-                              "6.Mostrar o maior valor\n" +
+                              "6. Mostrar o maior valor\n" +
                               "7. \n" +
                               "8.  \n" +
                               "9. \n" +
@@ -68,7 +68,10 @@ namespace ProjetoEstruturaRepeticaoVetor
                        Console.WriteLine(("Há: ") + modelo.ContarNumerosPares() + " números pares"); 
                         break;
                     case 6:
-                        Console.WriteLine(modelo.MostrarPosicao() + (modelo.j));
+                        this.modelo.Preencher();
+                        this.modelo.MostrarMaior();
+
+
                         break;
                     default:
                         Console.WriteLine("Erro, escolha uma opção valida!");

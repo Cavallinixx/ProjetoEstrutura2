@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
+using System.Reflection;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,15 +15,18 @@ namespace ProjetoEstruturaRepeticaoVetor
         public double[] notas;//Declaração de um vetor
         public int[] vetor;
         public int[] num;
-        public int[] numMaior;
+        public int numMaior;
         public double[] notas20;
         public int i;
         private double[] numDouble;
         public double[] pares;
         public double[] pares15;
         private double soma;
+        public int[] num25;
         public int j;
-
+        public int posicao;
+        public int[] num30;
+        public int numMenor;
 
         public Model()
         {
@@ -32,13 +36,17 @@ namespace ProjetoEstruturaRepeticaoVetor
             num = new int[10];
 
             numDouble = new double[20];
-            numMaior = new int[25];
+            numMaior = 0;
             pares = new double[10];
             pares15 = new double[15];
+            num25 = new int[25];
             i = 0;
             j = 0;
             ConsultarSoma = 0;
-            
+            posicao = 0;
+            numMenor= 0;
+
+
 
 
         }//fim do construtor
@@ -104,10 +112,10 @@ namespace ProjetoEstruturaRepeticaoVetor
                 {
                     Console.WriteLine(pares[i]);
                 }//fim  do if
-         
+
             }//fim for 
         }//fim metodo
-        
+
         //Exercicio 04
         public double PreencherVetor20Posicoes()
         {
@@ -123,13 +131,13 @@ namespace ProjetoEstruturaRepeticaoVetor
                     }//fim da validação
                 } while (notas20[i] < 0);
 
-                 ConsultarSoma += notas20[i];
+                ConsultarSoma += notas20[i];
             }
             return ConsultarSoma / i;
         }// fim do método 
 
         //exercicio 5 - Contar quantos números são pares
-       
+
         public double ContarNumerosPares()
         {
 
@@ -139,36 +147,74 @@ namespace ProjetoEstruturaRepeticaoVetor
                 pares15[i] = Convert.ToDouble((Console.ReadLine()));
                 if (pares15[i] % 2 == 0)
                 {
-                 
+
                     j = j + 1;
                 }//fim  do if
 
-               
+
             }//fim for 
             return j;
         }//Fim método
 
-            //Exercicio 06 - Ler os números e mostrar o Maior  
-
-            public double MostrarPosicao()
+        //Exercicio 06 - Ler os números e mostrar o Maior  
+        
+        public void Preencher() 
+        {
+            for (i = 0; i < 25; i++)
             {
-                for (i = 0; i < 25; i++)
+                Console.WriteLine((i + 1) + " º Número : ");
+                num25[i] = Convert.ToInt32((Console.ReadLine()));
+            }
+        }//Fim Método 
+        public void MostrarMaior()
+        {
+
+            for (i = 0; i < 25; i++)
+            {
+                if (i == 0)
                 {
-                    Console.WriteLine((i + 1) + " º número: ");
-                    numMaior[i] = Convert.ToInt32((Console.ReadLine()));
+                    numMaior = num25[i];
+                }//fim if 
 
-                    do
-                    {
-                        if (numMaior[i] < 0)
-                        {
-                            Console.WriteLine("Informe um número positivo!!");
-                        }// Fim validação
-                    } while (numMaior[i]< 0);
+                if (num25[i] > numMaior)
+                {
 
-                 
-                }// fim for
-                return MostrarPosicao();
-            }// fim metodo 
+                    numMaior = num25[i];
+                    posicao = i + 1;
+                    
+                }
+            }//fim for 
+            Console.WriteLine(" O maior número é: " + numMaior + ", A posição é: " + posicao);
+        }//Fim Método
 
+        //Exercicio 07 - Mostrar o Menor e a posição
+        public void PreencherMenor()
+        {
+            for (i = 0; i < 30; i++)
+            {
+                Console.WriteLine((i + 1) + " º Número : ");
+                num30[i] = Convert.ToInt32((Console.ReadLine()));
+            }
+        }//Fim Método 
+        public void MostrarMenor()
+        {
+
+            for (i = 0; i < 30; i++)
+            {
+                if (i == 0)
+                {
+                    numMenor = num30[i];
+                }//fim if 
+
+                if (num30[i] > numMenor)
+                {
+
+                    numMenor = num30[i];
+                    posicao = i + 1;
+
+                }
+            }//fim for 
+            Console.WriteLine(" O maior número é: " + numMaior + ", A posição é: " + posicao);
+        }//Fim Método
     }//fim da classe
 }//fim do projeto
